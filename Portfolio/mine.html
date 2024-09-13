@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Srinivas Anugonda-Portfolio</title>
+  <style>
+    :root {
+      --text-color: #1a1c20;
+      --link-color: #0a44e3;
+      /* --background-color: #f0f5ff;  */
+     
+    }
+
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-color);
+      background-color: var(--background-color);
+      line-height: 1.6;
+      /* background-size: cover; */
+      background-image: url(bg.png.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    .intro-page, .main-portfolio {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+     a {
+      color: var(--link-color);
+      text-decoration: none;
+      transition:color 0.3s ease ;
+    } 
+    a:hover{
+      filter: drop-shadow(0 0 19px rgb(34, 33, 33));
+      transform: scale(1.3) translateY(-5px);
+
+    } 
+
+    /* Intro Page Styles */
+    .intro-page {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .intro-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .intro-content h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .intro-content p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      animation: slideIn 2s ease-in-out;
+    }
+
+    .intro-content .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: var(--link-color);
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+
+    .intro-content .cta-button:hover {
+      transform: scale(1.3) translateY(-5px);
+    }
+
+      @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }  
+
+    /* Main Portfolio Styles */
+    .main-portfolio {
+      display: none;
+    }
+    .right{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .left{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+    nav .right a {
+      margin-left: 20px;
+      transition: color 0.3s ease;
+    }
+    nav .right a:hover{
+      filter: drop-shadow(0 0 19px rgb(34, 33, 33));
+      transform: scale(1.3) translateY(-5px);
+    }
+    h1{
+      transition: 0.5s;
+    }
+    h1:hover{
+      filter: drop-shadow(0 0 19px rgb(34, 33, 33));
+      transform: scale(1.1);
+    }
+    h2{
+      transition: 0.5s;
+    }
+    h2:hover{
+      filter: drop-shadow(0 0 19px rgb(34, 33, 33));
+      transform: scale(1.1);
+    }
+    h3{
+      transition: 0.5s;
+    }
+    h3:hover{
+      filter: drop-shadow(0 0 19px rgb(73, 72, 72));
+      transform: scale(1.1);
+    }
+    p{
+      transition: 0.5s;
+    }
+    p:hover{
+      filter: drop-shadow(0 0 19px rgb(66, 65, 65));
+      transform: scale(1.1);
+    }
+    .hero-section {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin: 50px 0;
+      /* transition: color 0.3s ease; */
+    }
+    .pic{
+      transition: color 0.3s ease
+    }
+    .pic:hover{
+      filter: drop-shadow(0 0 19px rgb(34, 33, 33));
+      transform: scale(1.1) translateY(-7px);
+    }
+    /* .hero-section:hover{
+      filter: drop-shadow(0 0 19px rgb(34, 33, 33));
+      transform: scale(1.1) translateY(-7px);
+    } */
+    .hero-section img {
+      width: 200px;
+      border-radius: 50%;
+      box-shadow: 12px 12px 20px orange;
+    }
+    .about-me-section, .skills-section, .education-section,.intern-section, .reach-me-section {
+      margin: 50px 0;
+      
+    }
+    
+    /* .section {
+    padding: 20px;
+    margin: 20px;
+    background:transparent;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+   }*/
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+      transition: color 0.3s ease;
+    }
+
+    .skill-item {
+      background-color: var(--link-color);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+    
+    }
+    .skills-list :hover{
+      filter: drop-shadow(0 0 19px rgb(34, 33, 33));
+      transform: scale(1.3) translateY(-5px);
+    }
+
+    .reach-me-links {
+      display: flex;
+      justify-content: start;
+      gap: 20px;
+      margin-top: 20px;
+      
+    }
+    .reach-me-links a {
+      font-size: 24px;
+      color: var(--text-color);
+      transition: color 0.3s ease;
+      color: var(--link-color);
+      
+      
+    }
+    .reach-me-links a:hover {
+    /* color: var(--text-color); */
+    transform: scale(1.3) translateY(-5px);
+    /* background-color: var(--link-color); */
+    }
+
+    @media (max-width: 768px) {
+      .hero-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .reach-me-links {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="intro-page">
+    <div class="intro-content">
+      <h1>Hey, I'm Srinivas👋</h1>
+       <h2>An Aspiring  Engineer </h2>
+      <p>Do you want to know about me?</p>
+      <a href="#" class="cta-button" onclick="showPortfolio()">Let's Go!</a>
+    </div>
+  </div>
+  <div class="main-portfolio">
+    <nav>
+      <div class="left">
+        <a href="file:///C:/Users/hp/Desktop/web/.vscode/Srinivas-resume.pdf">Srinivas Anugonda</a>
+      </div>
+      <div class="right">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#Internships">Internships</a>
+        <a href="#Reach-me">Reach Me</a>
+      </div>
+    </nav>
+    <main>
+      <section class="hero-section">
+        <img src="my.jpg.jpeg" alt="Srinivas Anugonda" class="pic">
+        <div>
+          <h1>Hi, I'm Srinivas 👋</h1>
+          <p>Dedicated Computer Science and Engineer with a passion for software development and problem-solving.</p>
+        </div>
+      </section>
+      <section id="about" class="about-me-section">
+        <h2>About Me</h2>
+        <p>As a fresh graduate in Computer Science and Engineer, I am passionate about leveraging technology to solve real-world problems. My journey in the world of coding began with curiosity and has evolved into a deep-seated passion for creating efficient, user-friendly solutions. I thrive on challenges and continuously seek opportunities to expand my knowledge and skills in the ever-evolving tech landscape.
+           Outside of coding, I enjoy Watching Anime and Movies.
+            I believe in the power of continuous learning and am always excited to take on new projects that push my boundaries and contribute to meaningful innovations.</p>
+      </section>
+      <section id="education" class="education-section">
+        <h2>Education</h2>
+        <h3>Bachelor of Technology in Computer Science</h3>
+        <p>Prakasam Engineering College,2021-2025</p>
+        <h3>Board of Intermidiate</h3>
+        <p>Krishnaveni Junior College,2019-2021</p>
+        <h3>Secondary Education</h3>
+        <p>Z.P Boys High School,2018-2019</p>
+      </section>
+      <section id="skills" class="skills-section"></section>
+        <h2>Skills</h2>
+        <div class="skills-list">
+          <span class="skill-item">Java</span>
+          <span class="skill-item">Python</span>
+          <span class="skill-item">Html & CSS</span>
+          <span class="skill-item">Sql</span>
+        </div>
+      </section>
+      <section id="Internships" class="intern-section">
+        <h2>Internship's</h2>
+            <h3>WEB DEVELOPMENT</h3>
+            <p>During my web development internship at Brain O vision Private Limited, I was
+                actively involved in the design, development, and maintenance of web
+                applications.
+            </p>
+            <h3>  DATA SCIENCE</h3>
+            <p>During my Data Science internship at APSSDC, Completed a Data Science internship enhanced my
+              analytical abilities, Expanded my machine learning knowledge, and offered valuable hands-on experience with
+              real-world data analysis and problem solving.
+            </p>
+            <h3>FULL STACK DEVELOPMENT</h3>
+            <p>Completed a Python internship, developing scalable code, integrating user-facing elements with server-side logic, collaborating on projects to enhance functionality and performance, and gaining hands-on experience in debugging and optimizing applications.
+            </p>
+    </section>
+    <section id="Reach-me" class="reach-me-section">
+      <h2>Reach-me</h2>
+      <div class="reach-me-links">
+          <a href="https://github.com/Seen-77" class="fa fa-github"></a>
+          <a href="mailto:seen4648@gmail.com" class="fa fa-envelope"></a>
+          <a href="https://www.instagram.com/s_e_e_n_77" class="fa fa-instagram"></a>
+          <a href="https://www.linkedin.com/in/srinivas-anugonda-aa8948325" class="fa fa-linkedin"></a>
+      </div>
+  </section>
+    </main>
+  </div>
+  <script>
+    function showPortfolio() {
+      document.querySelector('.intro-page').style.display = 'none';
+      document.querySelector('.main-portfolio').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
